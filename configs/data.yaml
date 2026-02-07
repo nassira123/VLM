@@ -1,0 +1,14 @@
+project_name: "FrozenVLM-CheXpert"
+run_id: ""
+seed: 42
+kaggle:
+  download: true
+  datasets:
+    chexpert: "nih-chest-xray/chexpert"
+    pneumonia: "paultimothymooney/chest-xray-pneumonia"
+    covid: "tawsifurrahman/covid19-radiography-database"
+paths:
+  data_dir: "data"
+chexpert:
+  view: "frontal"
+  soft_u_weight: 0.3
