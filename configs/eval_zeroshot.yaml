@@ -1,0 +1,24 @@
+project_name: "FrozenVLM-CheXpert"
+run_id: ""
+seed: 42
+paths:
+  manifest_csv: "data/chexpert_manifest.csv"
+  runs_dir: "runs"
+  drive_root: "/content/drive/MyDrive/FrozenVLM-CheXpert"
+model:
+  name: "ViT-B-32"
+  pretrained: "openai"
+  hf_id: ""
+  image_size: 224
+  batch_size: 64
+  num_workers: 4
+  mixed_precision: true
+  cache_features: true
+  label_policy: "u_ignore"
+  thresholds: [0.2, 0.5, 0.8]
+labels:
+  - "Atelectasis"
+  - "Cardiomegaly"
+  - "Consolidation"
+  - "Edema"
+  - "Pleural Effusion"

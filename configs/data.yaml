@@ -1,0 +1,16 @@
+project_name: "FrozenVLM-CheXpert"
+run_id: ""
+seed: 42
+kaggle:
+  download: true
+  datasets:
+    chexpert: "stanford/chexpert"
+    pneumonia: "paultimothymooney/chest-xray-pneumonia"
+    covid: "tawsifurrahman/covid19-radiography-database"
+paths:
+  data_dir: "data"
+  runs_dir: "runs"
+  drive_root: "/content/drive/MyDrive/FrozenVLM-CheXpert"
+chexpert:
+  view: "frontal"
+  soft_u_weight: 0.3

@@ -1,0 +1,33 @@
+project_name: "FrozenVLM-CheXpert"
+run_id: ""
+seed: 42
+paths:
+  runs_dir: "runs"
+  drive_root: "/content/drive/MyDrive/FrozenVLM-CheXpert"
+ablations:
+  - name: "A0_full"
+    use_cross_attention: true
+    multi_scale_levels: 2
+    use_dynamic_prompts: true
+    use_uncertainty_head: false
+  - name: "A1_no_cross_attention"
+    use_cross_attention: false
+    multi_scale_levels: 2
+    use_dynamic_prompts: true
+    use_uncertainty_head: false
+  - name: "A2_no_multiscale"
+    use_cross_attention: true
+    multi_scale_levels: 1
+    use_dynamic_prompts: true
+    use_uncertainty_head: false
+  - name: "A3_prompts_off"
+    use_cross_attention: true
+    multi_scale_levels: 2
+    use_dynamic_prompts: false
+    use_uncertainty_head: false
+  - name: "A4_static_prompts"
+    use_cross_attention: true
+    multi_scale_levels: 2
+    use_dynamic_prompts: true
+    static_prompts: true
+    use_uncertainty_head: false

@@ -1,0 +1,23 @@
+project_name: "FrozenVLM-CheXpert"
+run_id: ""
+seed: 42
+paths:
+  manifest_csv: "data/chexpert_manifest.csv"
+  runs_dir: "runs"
+  drive_root: "/content/drive/MyDrive/FrozenVLM-CheXpert"
+model:
+  encoders:
+    - name: "ViT-B-32"
+      pretrained: "openai"
+    - name: "hf-hub:microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224"
+      pretrained: ""
+  multi_scale_levels: 2
+  use_cross_attention: true
+  use_dynamic_prompts: true
+  use_uncertainty_head: false
+train:
+  epochs: 10
+  batch_size: 32
+  lr: 1e-4
+  mixed_precision: true
+  label_policy: "u_ignore"

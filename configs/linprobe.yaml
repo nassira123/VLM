@@ -1,0 +1,16 @@
+project_name: "FrozenVLM-CheXpert"
+run_id: ""
+seed: 42
+paths:
+  manifest_csv: "data/chexpert_manifest.csv"
+  runs_dir: "runs"
+  drive_root: "/content/drive/MyDrive/FrozenVLM-CheXpert"
+model:
+  name: "ViT-B-32"
+  pretrained: "openai"
+train:
+  epochs: 5
+  batch_size: 64
+  lr: 1e-3
+  mixed_precision: true
+  label_policy: "u_ignore"

@@ -1,0 +1,13 @@
+project_name: "FrozenVLM-CheXpert"
+run_id: ""
+seed: 42
+paths:
+  manifest_csv: "data/chexpert_manifest.csv"
+  runs_dir: "runs"
+  drive_root: "/content/drive/MyDrive/FrozenVLM-CheXpert"
+labels:
+  - "Atelectasis"
+  - "Cardiomegaly"
+  - "Consolidation"
+  - "Edema"
+  - "Pleural Effusion"
